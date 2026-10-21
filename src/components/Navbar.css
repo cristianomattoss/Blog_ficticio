@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+.blog-pages {
+  display: flex;
+  list-style: none;
+}
+
+.blog-pages li {
+  padding: 0 10px;
+  border-right: 1px solid white;
+}
+
+.blog-pages li:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.blog-pages a {
+  color: white;
+  text-decoration: none;
+}
