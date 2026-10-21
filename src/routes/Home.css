@@ -1,0 +1,20 @@
+.home {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.post {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.post h2 {
+  margin-bottom: 10px;
+}
+
+.post p {
+  color: #555;
+}
