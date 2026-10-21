@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import useApi from "../hooks/useApi";
-import type PostData from "../type/postData";
+import type PostData from "../types/postData";
+
+import "./Home.css";
 
 const Home = () => {
   const { get } = useApi();
@@ -17,9 +19,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="home">
       {posts.map((post) => (
-        <div key={post.id}>
+        <div className="post" key={post.id}>
           <h2>{post.title}</h2>
           <p>{post.body}</p>
         </div>

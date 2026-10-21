@@ -1,5 +1,5 @@
 import api from "../service/api";
-import type PostData from "../type/postData";
+import type PostData from "../types/postData";
 
 const useApi = () => {
   const get = async (endpoint: string) => {
