@@ -1,5 +1,4 @@
 import api from "../service/api";
-import type PostData from "../types/postData";
 
 const useApi = () => {
   const get = async (endpoint: string) => {
@@ -12,7 +11,10 @@ const useApi = () => {
     }
   };
 
-  const post = async (endpoint: string, data: PostData) => {
+  const post = async (
+    endpoint: string,
+    data: { title: string; content: string; userId: number },
+  ) => {
     try {
       const response = await api.post(endpoint, data);
       alert("Postagem criada com sucesso!");
