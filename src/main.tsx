@@ -6,6 +6,7 @@ import App from "./App.tsx";
 //routes
 import Home from "./routes/Home.tsx";
 import NewPost from "./routes/NewPost.tsx";
+import Post from "./routes/Post.tsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/new",
         element: <NewPost />,
+      },
+      {
+        path: "/posts/:id",
+        element: <Post />,
       },
     ],
   },

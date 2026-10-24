@@ -25,7 +25,16 @@ const useApi = () => {
     }
   };
 
-  return { get, post };
+  const getPost = async (endpoint: string) => {
+    try {
+      const response = await api.get(endpoint);
+      return response.data;
+    } catch (error) {
+      alert("Erro ao buscar Post");
+    }
+  };
+
+  return { get, post, getPost };
 };
 
 export default useApi;
