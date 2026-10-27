@@ -12,33 +12,21 @@ import EditPost from "./routes/EditPost.tsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/new",
-        element: <NewPost />,
-      },
-      {
-        path: "/posts/:id",
-        element: <Post />,
-      },
-      {
-        path: "/Admin",
-        element: <Admin />,
-      },
-      {
-        path: "posts/edit/:id",
-        element: <EditPost />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      element: <App />,
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "/new", element: <NewPost /> },
+        { path: "/posts/:id", element: <Post /> },
+        { path: "/Admin", element: <Admin /> },
+        { path: "/posts/edit/:id", element: <EditPost /> },
+      ],
+    },
+  ],
+  { basename: "/Blog_ficticio" },
+);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
