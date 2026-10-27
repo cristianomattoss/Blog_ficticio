@@ -13,6 +13,9 @@ const Navbar = () => {
         <li>
           <Link to="/new">Create Post</Link>
         </li>
+        <li>
+          <Link to="/admin">Gerenciar</Link>
+        </li>
       </ul>
     </nav>
   );

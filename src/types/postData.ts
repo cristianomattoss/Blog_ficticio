@@ -5,4 +5,10 @@ type PostData = {
   id: number;
 };
 
-export type { PostData };
+type UpdatePostData = {
+  title: string;
+  body: string;
+  userId: number;
+};
+
+export type { PostData, UpdatePostData };

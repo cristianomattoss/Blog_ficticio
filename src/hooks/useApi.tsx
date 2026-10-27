@@ -1,4 +1,5 @@
 import api from "../service/api";
+import type { UpdatePostData } from "../types/postData";
 
 const useApi = () => {
   const get = async (endpoint: string) => {
@@ -34,7 +35,23 @@ const useApi = () => {
     }
   };
 
-  return { get, post, getPost };
+  const deletePost = async (endpoint: string) => {
+    try {
+      const response = await api.delete(endpoint);
+      return response;
+    } catch {
+      alert("Erro ao deletar Post");
+    }
+  };
+
+  const updatePost = async (endpoint: string, post: UpdatePostData) => {
+    const response = await api.put(endpoint, {
+      body: post,
+    });
+    return response;
+  };
+
+  return { get, post, getPost, deletePost, updatePost };
 };
 
 export default useApi;
