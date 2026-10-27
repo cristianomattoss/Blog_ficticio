@@ -1,75 +1,97 @@
-# React + TypeScript + Vite
+# Blog Fictício 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida com React e TypeScript para gerenciamento de postagens, permitindo visualizar, criar, editar e excluir posts por meio de uma API.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React** — construção de interfaces com componentes.
+- **TypeScript** — tipagem estática.
+- **Vite** — ambiente de desenvolvimento e build.
+- **React Router DOM** — gerenciamento de rotas e navegação.
+- **Axios** — realização de requisições HTTP.
+- **Custom Hooks** — criação do hook `useApi` para centralizar e reutilizar as requisições à API.
+- **CSS** — estilização da aplicação.
+- **ESLint** — análise estática do código.
 
-## React Compiler
+## ✨ Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Listagem de postagens.
+- Visualização completa de uma postagem selecionada.
+- Criação de novas postagens.
+- Edição de postagens existentes.
+- Exclusão de postagens.
+- Navegação entre páginas utilizando React Router.
+- Consumo de API por meio de operações HTTP.
 
-## Expanding the ESLint configuration
+## 📦 Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Node.js](https://nodejs.org/)
+- npm
+- Git
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Como executar o projeto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**1. Clone o repositório**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone <URL_DO_REPOSITORIO>
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+**2. Acesse a pasta do projeto**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd blog_ficticio
 ```
+
+**3. Instale as dependências**
+
+```bash
+npm install
+```
+
+**4. Inicie o servidor de desenvolvimento**
+
+```bash
+npm run dev
+```
+
+Acesse a URL apresentada no terminal, normalmente `http://localhost:5173`.
+
+## 🧪 Scripts disponíveis
+
+**Verificar o código com ESLint:**
+
+```bash
+npm run lint
+```
+
+**Gerar a versão de produção:**
+
+```bash
+npm run build
+```
+
+**Visualizar a versão de produção localmente:**
+
+```bash
+npm run preview
+```
+
+Os arquivos compilados são gerados na pasta `dist`.
+
+## 🔌 Integração com API
+
+A aplicação utiliza o Axios para realizar requisições HTTP, organizadas por meio do hook personalizado `useApi`.
+
+As operações implementadas incluem:
+
+- `GET` — consulta de postagens.
+- `POST` — criação de postagens.
+- `PUT` — atualização de postagens.
+- `DELETE` — exclusão de postagens.
+
+## 📚 Objetivo do projeto
+
+Projeto desenvolvido para praticar React, TypeScript, gerenciamento de rotas, Custom Hooks, consumo de APIs e operações CRUD, aplicando boas práticas de desenvolvimento frontend.
+
+Desenvolvido como projeto de estudo em desenvolvimento web com React e TypeScript.
